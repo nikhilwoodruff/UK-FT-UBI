@@ -5,7 +5,7 @@ on:
       - main
 jobs:
   build-and-deploy:
-    if: github.repository == 'UBICenter/reponame'
+    if: github.repository == 'nikhilwoodruff/UK-FT-UBI'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -18,9 +18,9 @@ jobs:
       - name: Setup Miniconda
         uses: goanpeca/setup-miniconda@v1
         with:
-          activate-environment: reponame
+          activate-environment: UK-FT-UBI
           environment-file: environment.yml
-          python-version: 3.8
+          python-version: 3.7.9
           auto-activate-base: false
 
       - name: Build # Build Jupyter Book
